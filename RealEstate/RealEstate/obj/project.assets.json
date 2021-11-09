@@ -84,19 +84,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\saira\\.nuget\\packages\\": {}
+    "C:\\Users\\mahes\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\saira\\OneDrive\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
+      "projectUniqueName": "C:\\Users\\mahes\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
       "projectName": "RealEstate",
-      "projectPath": "C:\\Users\\saira\\OneDrive\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
-      "packagesPath": "C:\\Users\\saira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\saira\\OneDrive\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\obj\\",
+      "projectPath": "C:\\Users\\mahes\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
+      "packagesPath": "C:\\Users\\mahes\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mahes\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\saira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mahes\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -149,7 +149,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
