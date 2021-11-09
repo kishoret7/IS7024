@@ -56,6 +56,40 @@
     </div>
 
 
-    
+    <div>
+        <table border="1" width="80%">
+            <tr>
+                <th>Address</th>
+                <th>Managing Org</th>
+                <th>Community Area</th>
+                <th>Community Number</th>
+                <th>Property Status</th>
+                <th>ZipCode</th>
+                <th>Ward</th>
+
+            </tr>
+            @{
+                int records1 = 0;
+                foreach (LandData.Lands land in lands)
+                {
+                    records1 = records1 + 1;
+                    <tr>
+                        <td>@land.Address</td>
+                        <td>@land.ManagingOrganization</td>
+                        <td>@land.CommunityAreaName</td>
+                        <td>@land.CommunityAreaNumber</td>
+                        <td>@land.PropertyStatus</td>
+                        <td>@land.ZipCode </td>
+
+                        <td>@land.Ward</td>
+                    </tr>
+
+                    if (records1 == 10)
+                    { break; }
+                }
+            }
+        </table>
+
+    </div>
 
 </div>
