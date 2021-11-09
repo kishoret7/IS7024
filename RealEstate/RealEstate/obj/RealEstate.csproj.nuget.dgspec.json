@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kisho\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj": {}
+    "C:\\Users\\saira\\OneDrive\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kisho\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj": {
+    "C:\\Users\\saira\\OneDrive\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kisho\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
+        "projectUniqueName": "C:\\Users\\saira\\OneDrive\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
         "projectName": "RealEstate",
-        "projectPath": "C:\\Users\\kisho\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
-        "packagesPath": "C:\\Users\\kisho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kisho\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\obj\\",
+        "projectPath": "C:\\Users\\saira\\OneDrive\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
+        "packagesPath": "C:\\Users\\saira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\saira\\OneDrive\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kisho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\saira\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,6 +39,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Newtonsoft.Json.Schema": {
+              "target": "Package",
+              "version": "[3.0.14, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
