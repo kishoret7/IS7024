@@ -84,19 +84,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\saira\\.nuget\\packages\\": {}
+    "C:\\Users\\amark\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\saira\\OneDrive\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
+      "projectUniqueName": "C:\\Users\\amark\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
       "projectName": "RealEstate",
-      "projectPath": "C:\\Users\\saira\\OneDrive\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
-      "packagesPath": "C:\\Users\\saira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\saira\\OneDrive\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\obj\\",
+      "projectPath": "C:\\Users\\amark\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\RealEstate.csproj",
+      "packagesPath": "C:\\Users\\amark\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\amark\\Documents\\GitHub\\IS7024\\RealEstate\\RealEstate\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\saira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\amark\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
