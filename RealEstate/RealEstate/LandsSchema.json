@@ -13,8 +13,17 @@
           "type": "string",
           "format": "integer"
         },
-        
 
+
+        "pin": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "managing_organization": {
+          "type": "string"
+        },
 
         "property_status": {
           "type": "string"
