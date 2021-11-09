@@ -17,25 +17,9 @@ namespace LandData
 
     public partial class Lands
     {
-        [JsonProperty("id")]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long Id { get; set; }
+        
 
-        [JsonProperty("pin")]
-        public string Pin { get; set; }
-
-        [JsonProperty("address")]
-        public string Address { get; set; }
-
-        [JsonProperty("managing_organization")]
-        public string ManagingOrganization { get; set; }
-
-        [JsonProperty("property_status")]
-        public string PropertyStatus { get; set; }
-
-        [JsonProperty("sq_ft")]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long SqFt { get; set; }
+        
 
         [JsonProperty("ward")]
         [JsonConverter(typeof(ParseStringConverter))]
