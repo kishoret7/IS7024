@@ -17,7 +17,15 @@ namespace HouseData
 
     public partial class Houses
     {
-        
+        [JsonProperty("community_area")]
+        public string CommunityArea { get; set; }
+
+        [JsonProperty("community_area_number")]
+        [JsonConverter(typeof(ParseStringConverter))]
+        public long CommunityAreaNumber { get; set; }
+
+        [JsonProperty("property_type")]
+        public string PropertyType { get; set; }
 
         [JsonProperty("property_name")]
         public string PropertyName { get; set; }
