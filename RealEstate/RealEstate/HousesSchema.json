@@ -12,19 +12,12 @@
         "community_area": {
           "type": "string"
         },
-        "community_area_number": {
-          "type": "string",
-          "format": "integer"
-        },
-        "property_type": {
-          "type": "string"
-        },
-        "property_name": {
-          "type": "string"
-        },
-        "address": {
-          "type": "string"
-        },
+
+
+        
+
+
+
         "zip_code": {
           "type": "string",
           "format": "integer"
