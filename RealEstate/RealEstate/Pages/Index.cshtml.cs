@@ -36,7 +36,7 @@ namespace RealEstate.Pages
 
                 var landJSON = webClient.DownloadString("https://data.cityofchicago.org/resource/aksk-kvfp.json");
 
-                // CHANGE 2 : Try catch block to catch and throw exceptions - daspl
+                
                 string result = "";
 
                 try
