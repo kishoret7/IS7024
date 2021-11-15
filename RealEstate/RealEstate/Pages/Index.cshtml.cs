@@ -32,10 +32,22 @@ namespace RealEstate.Pages
                 // Convert raw text to list.
                 List<Houses> houseCollection = Houses.FromJson(houseJSON);
 
-
                 ViewData["Houses"] = houseCollection;
 
                 var landJSON = webClient.DownloadString("https://data.cityofchicago.org/resource/aksk-kvfp.json");
+
+                
+                string result = "";
+
+                try
+                {
+                    result = webClient.DownloadString(landJSON);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception while calling the Land API", e);
+
+               }
 
                 // Convert raw text to list.
                 List<Lands> landCollection = Lands.FromJson(landJSON);

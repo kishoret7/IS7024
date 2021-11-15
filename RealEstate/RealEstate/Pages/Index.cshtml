@@ -7,6 +7,7 @@
     List<LandData.Lands> lands = (List<LandData.Lands>)ViewData["Lands"];
 }
 
+
 <div class="text-center">
     <h1 class="display-4">Welcome to Real Estate</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
@@ -51,10 +52,7 @@
 
         <br />
 
-
-
     </div>
-
 
     <div>
         <table border="1" width="80%">
@@ -73,6 +71,11 @@
                 foreach (LandData.Lands land in lands)
                 {
                     landRecords = landRecords + 1;
+                   
+                    if (@land.ZipCode == 0)
+                    {
+                        continue;
+                    }
                     <tr>
                         <td>@land.Address</td>
                         <td>@land.ManagingOrganization</td>
@@ -80,7 +83,6 @@
                         <td>@land.CommunityAreaNumber</td>
                         <td>@land.PropertyStatus</td>
                         <td>@land.ZipCode </td>
-
                         <td>@land.Ward</td>
                     </tr>
 
