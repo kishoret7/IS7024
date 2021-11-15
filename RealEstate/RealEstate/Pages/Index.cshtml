@@ -69,10 +69,10 @@
 
             </tr>
             @{
-                int records1 = 0;
+                int landRecords = 0;
                 foreach (LandData.Lands land in lands)
                 {
-                    records1 = records1 + 1;
+                    landRecords = landRecords + 1;
                     <tr>
                         <td>@land.Address</td>
                         <td>@land.ManagingOrganization</td>
@@ -84,7 +84,7 @@
                         <td>@land.Ward</td>
                     </tr>
 
-                    if (records1 == 10)
+                    if (landRecords == 10)
                     { break; }
                 }
             }

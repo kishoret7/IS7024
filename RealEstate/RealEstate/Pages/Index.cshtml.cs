@@ -26,10 +26,10 @@ namespace RealEstate.Pages
 
             using (var webClient = new WebClient())
             {
-                // grab our JSON text. 
+                // Grab our JSON text. 
                 var houseJSON = webClient.DownloadString("https://data.cityofchicago.org/resource/s6ha-ppgi.json");
 
-                // convert raw text to list.
+                // Convert raw text to list.
                 List<Houses> houseCollection = Houses.FromJson(houseJSON);
 
 
@@ -37,7 +37,7 @@ namespace RealEstate.Pages
 
                 var landJSON = webClient.DownloadString("https://data.cityofchicago.org/resource/aksk-kvfp.json");
 
-                // convert raw text to list.
+                // Convert raw text to list.
                 List<Lands> landCollection = Lands.FromJson(landJSON);
 
 
