@@ -27,10 +27,26 @@ namespace RealEstate.Pages
             using (var webClient = new WebClient())
             {
                 // Grab our JSON text. 
-                var houseJSON = webClient.DownloadString("https://data.cityofchicago.org/resource/s6ha-ppgi.json");
+                string housedata = string.Empty;
+                
+
+
+
+                try
+                {
+                    housedata = webClient.DownloadString("https://data.cityofchicago.org/resource/s6ha-ppgi.json");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception while calling API", e);
+
+
+
+                }
+                
 
                 // Convert raw text to list.
-                List<Houses> houseCollection = Houses.FromJson(houseJSON);
+                List<Houses> houseCollection = Houses.FromJson(housedata);
 
 
                 ViewData["Houses"] = houseCollection;
