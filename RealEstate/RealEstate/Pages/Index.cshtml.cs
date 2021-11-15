@@ -22,31 +22,26 @@ namespace RealEstate.Pages
 
         public void OnGet()
         {
-
-
             using (var webClient = new WebClient())
             {
-                // grab our JSON text. 
-                var houseJSON = webClient.DownloadString("https://data.cityofchicago.org/resource/s6ha-ppgi.json");
+                var houseurl = "https://data.cityofchicago.org/resource/s6ha-ppgi.json";
+                var landurl = "https://data.cityofchicago.org/resource/aksk-kvfp.json";
+
+                // grab our JSON text.
+                var houseJSON = webClient.DownloadString(houseurl);
 
                 // convert raw text to list.
                 List<Houses> houseCollection = Houses.FromJson(houseJSON);
 
-
                 ViewData["Houses"] = houseCollection;
 
-                var landJSON = webClient.DownloadString("https://data.cityofchicago.org/resource/aksk-kvfp.json");
+                var landJSON = webClient.DownloadString(landurl);
 
                 // convert raw text to list.
                 List<Lands> landCollection = Lands.FromJson(landJSON);
 
-
                 ViewData["Lands"] = landCollection;
-
-
             }
-
-
         }
     }
 }
