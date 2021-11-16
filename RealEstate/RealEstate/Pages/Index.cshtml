@@ -9,7 +9,7 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome to Real Estate</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
     <div>
         <table border="1" width="80%">
             <tr>
@@ -73,16 +73,16 @@
                 foreach (LandData.Lands land in lands)
                 {
                     landRecords = landRecords + 1;
-                    <tr>
-                        <td>@land.Address</td>
-                        <td>@land.ManagingOrganization</td>
-                        <td>@land.CommunityAreaName</td>
-                        <td>@land.CommunityAreaNumber</td>
-                        <td>@land.PropertyStatus</td>
-                        <td>@land.ZipCode </td>
-
-                        <td>@land.Ward</td>
-                    </tr>
+                        <tr>
+                            <td>@land.Address</td>
+                            <td>@land.ManagingOrganization</td>
+                            <td>@land.CommunityAreaName</td>
+                            <td>@land.CommunityAreaNumber</td>
+                            <td>@land.PropertyStatus</td>
+                            <td>@land.ZipCode </td>
+                            <td>@land.Longitude</td>
+                            <td>@land.Latitude</td>
+                        </tr>
 
                     if (landRecords == 10)
                     { break; }
