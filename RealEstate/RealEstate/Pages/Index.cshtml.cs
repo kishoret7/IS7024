@@ -26,19 +26,38 @@ namespace RealEstate.Pages
 
             using (var webClient = new WebClient())
             {
-                // Grab our JSON text. 
-                var houseJSON = webClient.DownloadString("https://data.cityofchicago.org/resource/s6ha-ppgi.json");
+                
+                string Chicago_data = string.Empty;
+
+                try
+                {
+                    Chicago_data = webClient.DownloadString("https://data.cityofchicago.org/resource/s6ha-ppgi.json");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception while calling API", e);
+                }
 
                 // Convert raw text to list.
-                List<Houses> houseCollection = Houses.FromJson(houseJSON);
+                List<Houses> houseCollection = Houses.FromJson(Chicago_data);
 
 
                 ViewData["Houses"] = houseCollection;
 
-                var landJSON = webClient.DownloadString("https://data.cityofchicago.org/resource/aksk-kvfp.json");
+                string Chicago_Land_data = string.Empty;
+
+                try
+                {
+                    Chicago_Land_data = webClient.DownloadString("https://data.cityofchicago.org/resource/aksk-kvfp.json");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception while calling API", e);
+                }
+            
 
                 // Convert raw text to list.
-                List<Lands> landCollection = Lands.FromJson(landJSON);
+                List<Lands> landCollection = Lands.FromJson(Chicago_Land_data);
 
 
                 ViewData["Lands"] = landCollection;
