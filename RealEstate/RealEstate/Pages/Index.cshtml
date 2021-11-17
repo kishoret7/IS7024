@@ -6,90 +6,91 @@
     List<HouseData.Houses> houses = (List<HouseData.Houses>)ViewData["Houses"];
     List<LandData.Lands> lands = (List<LandData.Lands>)ViewData["Lands"];
 }
+<body style="background-color: #d6c3c3">
+    <div class="text-center">
+        <h1 class="display-4" style="background-color: #d0a4a4">Welcome to Real Estate</h1>
+        <!-- <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> -->
+        <div>
+            <table border="1" width="80%" bordercolor="black">
+                <tr>
+                    <th>Community Area</th>
+                    <th>Community Number</th>
+                    <th>Property Type</th>
+                    <th>Property Name</th>
+                    <th>ZipCode</th>
+                    <th>Address</th>
+                    <th>Management Company</th>
+                </tr>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Real Estate</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <div>
-        <table border="1" width="80%">
-            <tr>
-                <th>Community Area</th>
-                <th>Community Number</th>
-                <th>Property Type</th>
-                <th>Property Name</th>
-                <th>ZipCode</th>
-                <th>Address</th>
-                <th>Management Company</th>
-            </tr>
-
-            @{
-                int records = 0;
-                foreach (HouseData.Houses house in houses)
-                {
-                    records = records + 1;
-                    <tr>
-                        <td>@house.CommunityArea</td>
-                        <td>@house.CommunityAreaNumber</td>
-                        <td>@house.PropertyName</td>
-                        <td>@house.PropertyType</td>
-                        <td>@house.ZipCode </td>
-                        <td>@house.Address</td>
-                        <td>@house.ManagementCompany</td>
-                    </tr>
-                    if (records == 10)
-                    { break; }
+                @{
+                    int records = 0;
+                    foreach (HouseData.Houses house in houses)
+                    {
+                        records = records + 1;
+                        <tr class="text-left">
+                            <td>@house.CommunityArea</td>
+                            <td>@house.CommunityAreaNumber</td>
+                            <td>@house.PropertyName</td>
+                            <td>@house.PropertyType</td>
+                            <td>@house.ZipCode </td>
+                            <td>@house.Address</td>
+                            <td>@house.ManagementCompany</td>
+                        </tr>
+                        if (records == 10)
+                        { break; }
 
 
+                    }
                 }
-            }
-        </table>
-    </div>
+            </table>
+        </div>
 
-    <div>
+        <div>
 
-        <br />
+            <br />
 
-        <br />
-
+            <br />
 
 
-    </div>
+
+        </div>
 
 
-    <div>
-        <table border="1" width="80%">
-            <tr>
-                <th>Address</th>
-                <th>Managing Org</th>
-                <th>Community Area</th>
-                <th>Community Number</th>
-                <th>Property Status</th>
-                <th>ZipCode</th>
-                <th>Ward</th>
+        <div>
+            <table border="1" width="80%" bordercolor="black">
+                <tr>
+                    <th>Address</th>
+                    <th>Managing Org</th>
+                    <th>Community Area</th>
+                    <th>Community Number</th>
+                    <th>Property Status</th>
+                    <th>ZipCode</th>
+                    <th>Ward</th>
 
-            </tr>
-            @{
-                int landRecords = 0;
-                foreach (LandData.Lands land in lands)
-                {
-                    landRecords = landRecords + 1;
-                    <tr>
-                        <td>@land.Address</td>
-                        <td>@land.ManagingOrganization</td>
-                        <td>@land.CommunityAreaName</td>
-                        <td>@land.CommunityAreaNumber</td>
-                        <td>@land.PropertyStatus</td>
-                        <td>@land.ZipCode </td>
+                </tr>
+                @{
+                    int landRecords = 0;
+                    foreach (LandData.Lands land in lands)
+                    {
+                        landRecords = landRecords + 1;
+                        <tr class="text-left">
+                            <td>@land.Address</td>
+                            <td>@land.ManagingOrganization</td>
+                            <td>@land.CommunityAreaName</td>
+                            <td>@land.CommunityAreaNumber</td>
+                            <td>@land.PropertyStatus</td>
+                            <td>@land.ZipCode </td>
 
-                        <td>@land.Ward</td>
-                    </tr>
+                            <td>@land.Ward</td>
+                        </tr>
 
-                    if (landRecords == 10)
-                    { break; }
+                        if (landRecords == 10)
+                        { break; }
+                    }
                 }
-            }
-        </table>
+            </table>
+
+        </div>
 
     </div>
-
-</div>
+</body>
