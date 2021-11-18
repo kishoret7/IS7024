@@ -1,0 +1,72 @@
+﻿@page
+@model RealEstate.Pages.LandsModel
+@{
+    ViewData["Title"] = "LandInventory";
+    var TheLandsList = (List<LandData.Lands>)ViewData["UserLandsList"];
+}
+
+
+<div class="container">
+
+    <form method="get">
+        <div class="form-group">
+            <label for="SearchItem" class="control-label">Land Inventories</label>
+            <div class="mb-5">
+                Search by <span class="span_style"><strong>Community Number</strong></span>&nbsp;&nbsp;&nbsp;
+            </div>
+            <input id="SearchItem" value="@Model.CommunityNumberItem" name="query" class="form-control" type="text" />
+        </div>
+        <div style="margin-bottom:20px;">
+            <input class="btn btn-primary" type="submit" value="Search" />
+        </div>
+    </form>
+
+    @if (string.IsNullOrWhiteSpace(Model.CommunityNumberItem))
+    {
+
+    }
+    else if (TheLandsList == null)
+    {
+    <div class="alert alert-info"> Data for Lands in this Community area number [@Model.CommunityNumberItem] not found.</div>
+    }
+    else
+    {
+    <div>
+        <table border="1" width="80%">
+            <tr>
+                <th>Property Status</th>
+                <th>Managing Org</th>
+                <th>Community Area</th>
+                <th>Address</th>
+                <th>ZipCode</th>
+                <th>Area Available</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+            @{
+            int FirstTenLands = 0;
+            foreach (LandData.Lands land in TheLandsList)
+            {
+            FirstTenLands = FirstTenLands + 1;
+            <tr>
+                <td>@land.PropertyStatus</td>
+                <td>@land.ManagingOrganization</td>
+                <td>@land.CommunityAreaName</td>
+                <td>@land.Address</td>
+                <td>@land.ZipCode </td>
+                <td>@land.SqFt </td>
+                <td>@land.Latitude</td>
+                <td>@land.Longitude</td>
+            </tr>
+
+            if (FirstTenLands == 20)
+                { break; }
+                }
+            }
+        </table>
+
+    </div>
+    }
+</div>
+
+

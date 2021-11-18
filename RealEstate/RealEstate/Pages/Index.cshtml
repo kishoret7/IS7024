@@ -2,94 +2,19 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-
+    
     List<HouseData.Houses> houses = (List<HouseData.Houses>)ViewData["Houses"];
     List<LandData.Lands> lands = (List<LandData.Lands>)ViewData["Lands"];
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome to Real Estate</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
     <div>
-        <table border="1" width="80%">
-            <tr>
-                <th>Community Area</th>
-                <th>Community Number</th>
-                <th>Property Type</th>
-                <th>Property Name</th>
-                <th>ZipCode</th>
-                <th>Address</th>
-                <th>Management Company</th>
-            </tr>
-
-            @{
-                int records = 0;
-                foreach (HouseData.Houses house in houses)
-                {
-                    records = records + 1;
-                    <tr>
-                        <td>@house.CommunityArea</td>
-                        <td>@house.CommunityAreaNumber</td>
-                        <td>@house.PropertyName</td>
-                        <td>@house.PropertyType</td>
-                        <td>@house.ZipCode </td>
-                        <td>@house.Address</td>
-                        <td>@house.ManagementCompany</td>
-                    </tr>
-                    if (records == 10)
-                    { break; }
+        
+   Your design here
 
 
-                }
-            }
-        </table>
-    </div>
-
-    <div>
-
-        <br />
-
-        <br />
-
-
+   
 
     </div>
-
-
-    <div>
-        <table border="1" width="80%">
-            <tr>
-                <th>Address</th>
-                <th>Managing Org</th>
-                <th>Community Area</th>
-                <th>Community Number</th>
-                <th>Property Status</th>
-                <th>ZipCode</th>
-                <th>Ward</th>
-
-            </tr>
-            @{
-                int records1 = 0;
-                foreach (LandData.Lands land in lands)
-                {
-                    records1 = records1 + 1;
-                    <tr>
-                        <td>@land.Address</td>
-                        <td>@land.ManagingOrganization</td>
-                        <td>@land.CommunityAreaName</td>
-                        <td>@land.CommunityAreaNumber</td>
-                        <td>@land.PropertyStatus</td>
-                        <td>@land.ZipCode </td>
-
-                        <td>@land.Ward</td>
-                    </tr>
-
-                    if (records1 == 10)
-                    { break; }
-                }
-            }
-        </table>
-
-    </div>
-
-</div>
