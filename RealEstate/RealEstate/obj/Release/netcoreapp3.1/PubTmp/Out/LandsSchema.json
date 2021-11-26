@@ -1,0 +1,145 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/Land"
+  },
+  "definitions": {
+    "Land": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "integer"
+        },
+
+
+        "pin": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "managing_organization": {
+          "type": "string"
+        },
+
+        "property_status": {
+          "type": "string"
+        },
+        "sq_ft": {
+          "type": "string",
+          "format": "integer"
+        },
+        "ward": {
+          "type": "string",
+          "format": "integer"
+        },
+        "community_area_number": {
+          "type": "string",
+          "format": "integer"
+        },
+        "community_area_name": {
+          "type": "string"
+        },
+        "zoning_classification": {
+          "type": "string"
+        },
+        "zip_code": {
+          "type": "string",
+          "format": "integer"
+        },
+        "last_update": {
+          "type": "string"
+        },
+        "x_coordinate": {
+          "type": "string"
+        },
+        "y_coordinate": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "string"
+        },
+        "longitude": {
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/definitions/Location"
+        },
+        ":@computed_region_rpca_8um6": {
+          "type": "string",
+          "format": "integer"
+        },
+        ":@computed_region_vrxf_vc4k": {
+          "type": "string",
+          "format": "integer"
+        },
+        ":@computed_region_6mkv_f3dw": {
+          "type": "string",
+          "format": "integer"
+        },
+        ":@computed_region_bdys_3d7i": {
+          "type": "string",
+          "format": "integer"
+        },
+        ":@computed_region_43wa_7qmu": {
+          "type": "string",
+          "format": "integer"
+        },
+        ":@computed_region_awaf_s7ux": {
+          "type": "string",
+          "format": "integer"
+        }
+      },
+      "required": [
+        ":@computed_region_43wa_7qmu",
+        ":@computed_region_6mkv_f3dw",
+        ":@computed_region_awaf_s7ux",
+        ":@computed_region_bdys_3d7i",
+        ":@computed_region_rpca_8um6",
+        ":@computed_region_vrxf_vc4k",
+        "address",
+        "community_area_name",
+        "community_area_number",
+        "id",
+        "last_update",
+        "latitude",
+        "location",
+        "longitude",
+        "managing_organization",
+        "pin",
+        "property_status",
+        "sq_ft",
+        "ward",
+        "x_coordinate",
+        "y_coordinate",
+        "zip_code",
+        "zoning_classification"
+      ],
+      "title": "Land"
+    },
+    "Location": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "latitude": {
+          "type": "string"
+        },
+        "longitude": {
+          "type": "string"
+        },
+        "human_address": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "human_address",
+        "latitude",
+        "longitude"
+      ],
+      "title": "Location"
+    }
+  }
+}
