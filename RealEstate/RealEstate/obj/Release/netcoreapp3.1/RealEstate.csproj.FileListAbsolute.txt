@@ -42,3 +42,5 @@ C:\Users\kisho\Documents\GitHub\IS7024\RealEstate\RealEstate\obj\Release\netcore
 C:\Users\kisho\Documents\GitHub\IS7024\RealEstate\RealEstate\obj\Release\netcoreapp3.1\RealEstate.dll
 C:\Users\kisho\Documents\GitHub\IS7024\RealEstate\RealEstate\obj\Release\netcoreapp3.1\RealEstate.pdb
 C:\Users\kisho\Documents\GitHub\IS7024\RealEstate\RealEstate\obj\Release\netcoreapp3.1\RealEstate.genruntimeconfig.cache
+C:\Users\kisho\Documents\GitHub\IS7024\RealEstate\RealEstate\bin\Release\netcoreapp3.1\Brews.json
+C:\Users\kisho\Documents\GitHub\IS7024\RealEstate\RealEstate\obj\Release\netcoreapp3.1\Razor\Pages\Brews.cshtml.g.cs

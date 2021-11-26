@@ -44,7 +44,7 @@
                     </tr>
 
                     @{
-                      int FirstTenHouses = 0;
+                        int FirstTenHouses = 0;
                         foreach (HouseData.Houses house in TheHousesList)
                         {
                             FirstTenHouses = FirstTenHouses + 1;
@@ -54,14 +54,15 @@
                                 <td>@house.CommunityArea</td>
 
                                 <td>
-                                    <a asp-page="./Lands" asp-route-query="@house.CommunityAreaNumber">@house.CommunityAreaNumber</a>
+                                <a asp-page="./Lands" asp-route-query="@house.CommunityAreaNumber">@house.CommunityAreaNumber</a>
                                 </td>
                                 <td>@house.Units</td>
                                 <td>@house.PhoneNumber </td>
                                 <td>@house.ManagementCompany</td>
                             </tr>
-                            if (FirstTenHouses == 20)
-                            { break; }
+
+                        if (FirstTenHouses == 20)
+                        { break; }
 
 
                         }

@@ -1,0 +1,42 @@
+﻿@page
+@model RealEstate.Pages.BrewsModel
+@{
+    var TheBrewsList = (List<BrewsData.Breweries>)ViewData["Brews"];
+}
+
+<div>
+    <table border="1" width="80%">
+        <tr>
+          
+            <th>Name</th>
+            <th>Brewery Type</th>
+            <th>Street</th>
+            <th>Phone</th>
+            <th>Website Url</th>
+         
+        </tr>
+        @{
+            int First30brews = 0;
+            foreach (BrewsData.Breweries brew in TheBrewsList)
+            {
+
+                First30brews = First30brews + 1;
+                <tr>
+                    
+                    <td>@brew.Name</td>
+                    <td>@brew.BreweryType</td>
+                    <td>@brew.Street</td>
+                    <td>@brew.Phone</td>
+                    <td>@brew.WebsiteUrl</td>
+                   
+                </tr>
+
+
+                    if (First30brews == 30)
+                    { break; }
+                }
+            }
+     </table>
+
+</div>
+
