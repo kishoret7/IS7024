@@ -105,3 +105,16 @@ RealEstate/RealEstate/bin/Release/netcoreapp3.1/RealEstate.Views.dll
 RealEstate/RealEstate/bin/Release/netcoreapp3.1/RealEstate.Views.pdb
 *.dll
 *.pdb
+RealEstate/.vs/RealEstate/DesignTimeBuild/.dtbcache.v2
+RealEstate/.vs/RealEstate/v16/.suo
+RealEstate/RealEstate/bin/Release/netcoreapp3.1/RealEstate.dll
+RealEstate/RealEstate/bin/Release/netcoreapp3.1/RealEstate.pdb
+RealEstate/RealEstate/bin/Release/netcoreapp3.1/RealEstate.Views.dll
+RealEstate/RealEstate/bin/Release/netcoreapp3.1/RealEstate.Views.pdb
+RealEstate/RealEstate/obj/Release/netcoreapp3.1/RealEstate.csproj.CoreCompileInputs.cache
+RealEstate/RealEstate/obj/Release/netcoreapp3.1/RealEstate.csproj.FileListAbsolute.txt
+RealEstate/RealEstate/obj/Release/netcoreapp3.1/RealEstate.dll
+RealEstate/RealEstate/obj/Release/netcoreapp3.1/RealEstate.pdb
+RealEstate/RealEstate/obj/Release/netcoreapp3.1/RealEstate.RazorCoreGenerate.cache
+RealEstate/RealEstate/obj/Release/netcoreapp3.1/RealEstate.Views.dll
+RealEstate/RealEstate/obj/Release/netcoreapp3.1/RealEstate.Views.pdb

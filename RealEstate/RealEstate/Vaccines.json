@@ -1,0 +1,91 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/Vaccine"
+  },
+  "definitions": {
+    "Vaccine": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "mmwrWeek": {
+          "type": "integer"
+        },
+        "location": {
+          "type": "string"
+        },
+        "administeredDaily": {
+          "type": "integer"
+        },
+        "administeredCumulative": {
+          "type": "integer"
+        },
+        "administered7_DayRolling": {
+          "type": "integer"
+        },
+        "adminDose1_Daily": {
+          "type": "integer"
+        },
+        "adminDose1_Cumulative": {
+          "type": "integer"
+        },
+        "adminDose1_DayRolling": {
+          "type": "integer"
+        },
+        "dateType": {
+          "type": "integer"
+        },
+        "administeredDailyChange": {
+          "type": "integer"
+        },
+        "administeredDailyChange1": {
+          "type": "integer"
+        },
+        "seriesCompleteDaily": {
+          "type": "integer"
+        },
+        "seriesCompleteCumulative": {
+          "type": "integer"
+        },
+        "seriesCompleteDayRolling": {
+          "type": "integer"
+        },
+        "boosterDaily": {
+          "type": "integer"
+        },
+        "boosterCumulative": {
+          "type": "integer"
+        },
+        "booster7_DayRollingAverage": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "adminDose1_Cumulative",
+        "adminDose1_Daily",
+        "adminDose1_DayRolling",
+        "administered7_DayRolling",
+        "administeredCumulative",
+        "administeredDaily",
+        "administeredDailyChange",
+        "administeredDailyChange1",
+        "booster7_DayRollingAverage",
+        "boosterCumulative",
+        "boosterDaily",
+        "date",
+        "dateType",
+        "location",
+        "mmwrWeek",
+        "seriesCompleteCumulative",
+        "seriesCompleteDaily",
+        "seriesCompleteDayRolling"
+      ],
+      "title": "Vaccine"
+    }
+  }
+}
