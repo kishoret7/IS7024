@@ -118,3 +118,5 @@ RealEstate/RealEstate/obj/Release/netcoreapp3.1/RealEstate.pdb
 RealEstate/RealEstate/obj/Release/netcoreapp3.1/RealEstate.RazorCoreGenerate.cache
 RealEstate/RealEstate/obj/Release/netcoreapp3.1/RealEstate.Views.dll
 RealEstate/RealEstate/obj/Release/netcoreapp3.1/RealEstate.Views.pdb
+*.dll
+*.pdb
