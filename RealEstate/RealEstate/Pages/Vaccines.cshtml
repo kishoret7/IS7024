@@ -1,0 +1,88 @@
+﻿@page
+@model RealEstate.Pages.VaccinesModel
+@{
+    
+
+    RealEstate.VaccinesData.Vaccines TheVacinesDetails= (RealEstate.VaccinesData.Vaccines)ViewData["CovidVaccines"];
+
+}
+
+<div class="container">
+    <br />
+    <h6> We care about our cutomers.</h6>
+    <h4>Latest StateWise Covid Vaccines</h4>
+    <div>
+        <form method="get" class="row mb-3 ml-1">
+            <div class="input-group row">
+                <div class="col-sm-2 font-weight-bold">Select a State</div>
+                <select class="form-control" name="query" asp-for="@Model.UserState" asp-items="ViewBag.UserState"></select>
+                <div class="input-group-append">
+                    <input type="submit" value="Submit" class="btn btn-outline-secondary" />
+                </div>
+            </div>
+        </form>
+
+        @if (string.IsNullOrWhiteSpace(Model.UserState))
+        {
+
+        }
+        else if (TheVacinesDetails == null)
+        {
+            <div class="alert alert-info">COVID19 Data for @Model.AllStatesDropdownDictionary[@Model.UserState] not found.</div>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-md-6">
+                    <div >
+                        <div class="card-subtitle">
+                            CUMULATIVE DOSAGE TILL DATE
+                        </div>
+                        
+                        <dl class="row">
+                            <dt class="col-sm-6">
+                                Date
+                            </dt>
+                            <dd class="col-sm-6">
+                                @TheVacinesDetails.Date.Date.ToShortDateString()
+                            </dd>
+                            <dt class="col-sm-6">
+                                State
+                            </dt>
+                            <dd class="col-sm-6">
+                                @Model.AllStatesDropdownDictionary[TheVacinesDetails.Location.ToUpper()]
+                            </dd>
+                            <dt class="col-sm-6">
+                                Total Doses Administered
+                            </dt>
+                            <dd class="col-sm-6">
+                                @TheVacinesDetails.AdministeredCumulative
+                            </dd>
+                            <dt class="col-sm-6">
+                                Totat Dose 1 Administered
+                            </dt>
+                            <dd class="col-sm-6">
+                                @TheVacinesDetails.AdministeredDaily
+                            </dd>
+                            <dt class="col-sm-6">
+                                Total Series Complete
+                            </dt>
+                            <dd class="col-sm-6">
+                                @TheVacinesDetails.SeriesCompleteCumulative
+                            </dd>
+                            <dt class="col-sm-6">
+                                Total Booster Doses Administered
+                            </dt>
+                            <dd class="col-sm-6">
+                                @TheVacinesDetails.BoosterCumulative
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                
+                
+            </div>
+        }
+    </div>
+</div>
