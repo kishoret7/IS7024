@@ -1,0 +1,119 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/House"
+  },
+  "definitions": {
+    "House": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "community_area": {
+          "type": "string"
+        },
+
+
+        "community_area_number": {
+          "type": "string",
+          "format": "integer"
+        },
+        "property_type": {
+          "type": "string"
+        },
+        "property_name": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+
+
+
+        "zip_code": {
+          "type": "string",
+          "format": "integer"
+        },
+        "phone_number": {
+          "type": "string"
+
+        },
+        "management_company": {
+          "type": "string"
+        },
+        "units": {
+          "type": "string",
+          "format": "integer"
+        },
+        "x_coordinate": {
+          "type": "string"
+        },
+        "y_coordinate": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "string"
+        },
+        "longitude": {
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/definitions/Location"
+        },
+        ":@computed_region_awaf_s7ux": {
+          "type": "string",
+          "format": "integer"
+        },
+        ":@computed_region_43wa_7qmu": {
+          "type": "string",
+          "format": "integer"
+        },
+        ":@computed_region_vrxf_vc4k": {
+          "type": "string",
+          "format": "integer"
+        },
+        ":@computed_region_6mkv_f3dw": {
+          "type": "string",
+          "format": "integer"
+        },
+        ":@computed_region_bdys_3d7i": {
+          "type": "string",
+          "format": "integer"
+        }
+      },
+      "required": [
+        "address",
+        "community_area",
+        "community_area_number",
+        "management_company",
+        "phone_number",
+        "property_name",
+        "property_type",
+        "units",
+        "zip_code"
+      ],
+      "title": "House"
+    },
+    "Location": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "latitude": {
+          "type": "string"
+        },
+        "longitude": {
+          "type": "string"
+        },
+        "human_address": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "human_address",
+        "latitude",
+        "longitude"
+      ],
+      "title": "Location"
+    }
+  }
+}
