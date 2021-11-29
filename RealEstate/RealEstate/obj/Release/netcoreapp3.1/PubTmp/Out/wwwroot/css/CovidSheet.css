@@ -1,0 +1,14 @@
+﻿.padd {
+    padding: 3%;
+    margin-left: 32%;
+}
+
+body {
+    background-image: url("https://www.hopkinsmedicine.org/-/media/images/health/1_-conditions/coronavirus/covid-safety-family-teaser.ashx");
+    background-repeat: no-repeat;
+    background-size: 1800px 700px;
+}
+
+.linkchange {
+    color: #18fcff !important;
+}
