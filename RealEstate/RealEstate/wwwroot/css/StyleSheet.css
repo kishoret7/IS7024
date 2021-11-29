@@ -1,0 +1,17 @@
+﻿.padd {
+    padding: 3%;
+    margin-left: 32%;
+}
+
+body {
+    background-image: url("https://wallpaperaccess.com/full/306427.jpg ");
+    background-repeat: no-repeat;
+    background-size: 1800px 1200px;
+}
+
+.linkchange {
+    color: #18fcff !important;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
