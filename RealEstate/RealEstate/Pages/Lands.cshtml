@@ -5,68 +5,90 @@
     var TheLandsList = (List<LandData.Lands>)ViewData["UserLandsList"];
 }
 
+<body style="background-color:powderblue;">
+    <link rel="stylesheet" href="/css/StyleSheet.css" type="text/css" />
+    <div class="container">
 
-<div class="container">
-
-    <form method="get">
-        <div class="form-group">
-            <label for="SearchItem" class="control-label">Land Inventories</label>
-            <div class="mb-5">
-                Search by <span class="span_style"><strong>Community Number</strong></span>&nbsp;&nbsp;&nbsp;
+        <form method="get">
+            <div class="form-group">
+                <label for="SearchItem" style="color: goldenrod" class="control-label"> <strong>Land Inventories</strong></label>
+                <div style="color: goldenrod" class="mb-5">
+                    <strong>Search by </strong> <span style="color: goldenrod" class="span_style"><strong>Community Number</strong></span>&nbsp;&nbsp;&nbsp;
+                </div>
+                <input id="SearchItem" value="@Model.CommunityNumberItem" name="query" class="form-control" type="text" />
             </div>
-            <input id="SearchItem" value="@Model.CommunityNumberItem" name="query" class="form-control" type="text" />
-        </div>
-        <div style="margin-bottom:20px;">
-            <input class="btn btn-primary" type="submit" value="Search" />
-        </div>
-    </form>
+            <div style="margin-bottom:20px;">
+                <input class="btn btn-primary" type="submit" value="Search" />
+            </div>
+        </form>
 
-    @if (string.IsNullOrWhiteSpace(Model.CommunityNumberItem))
-    {
+        @if (string.IsNullOrWhiteSpace(Model.CommunityNumberItem))
+        {
 
-    }
-    else if (TheLandsList == null)
-    {
-    <div class="alert alert-info"> Data for Lands in this Community area number [@Model.CommunityNumberItem] not found.</div>
-    }
-    else
-    {
-    <div>
-        <table border="1" width="80%">
-            <tr>
-                <th>Property Status</th>
-                <th>Managing Org</th>
-                <th>Community Area</th>
-                <th>Address</th>
-                <th>ZipCode</th>
-                <th>Area Available</th>
-                <th>Latitude</th>
-                <th>Longitude</th>
-            </tr>
-            @{
-            int FirstTenLands = 0;
-            foreach (LandData.Lands land in TheLandsList)
-            {
-            FirstTenLands = FirstTenLands + 1;
-            <tr>
-                <td>@land.PropertyStatus</td>
-                <td>@land.ManagingOrganization</td>
-                <td>@land.CommunityAreaName</td>
-                <td>@land.Address</td>
-                <td>@land.ZipCode </td>
-                <td>@land.SqFt </td>
-                <td>@land.Latitude</td>
-                <td>@land.Longitude</td>
-            </tr>
+        }
+        else if (TheLandsList == null)
+        {
+            <div class="alert alert-info"> Data for Lands in this Community area number [@Model.CommunityNumberItem] not found.</div>
+        }
+        else
+        {
+            <div>
+                <style>
+                    .myTable {
+                        width: 100%;
+                        text-align: left;
+                        background-color: lemonchiffon;
+                        border-collapse: collapse;
+                    }
 
-            if (FirstTenLands == 20)
-                { break; }
-                }
-            }
-        </table>
+                        .myTable th {
+                            background-color: goldenrod;
+                            color: white;
+                        }
 
+                        .myTable td,
+                        .myTable th {
+                            padding: 10px;
+                            border: 1px solid goldenrod;
+                        }
+                </style>
+
+
+                <table class="myTable" border="1" width="80%">
+                    <tr>
+                        <th>Property Status</th>
+                        <th>Managing Org</th>
+                        <th>Community Area</th>
+                        <th>Address</th>
+                        <th>ZipCode</th>
+                        <th>Area Available</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                    </tr>
+                    @{
+                        int FirstTenLands = 0;
+                        foreach (LandData.Lands land in TheLandsList)
+                        {
+                            FirstTenLands = FirstTenLands + 1;
+                            <tr>
+                                <td>@land.PropertyStatus</td>
+                                <td>@land.ManagingOrganization</td>
+                                <td>@land.CommunityAreaName</td>
+                                <td>@land.Address</td>
+                                <td>@land.ZipCode </td>
+                                <td>@land.SqFt </td>
+                                <td>@land.Latitude</td>
+                                <td>@land.Longitude</td>
+                            </tr>
+
+                            if (FirstTenLands == 20)
+                            { break; }
+                        }
+                    }
+                </table>
+
+            </div>
+        }
     </div>
-    }
-</div>
-
+</body>
 

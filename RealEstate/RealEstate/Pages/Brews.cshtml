@@ -1,19 +1,39 @@
 ﻿@page
 @model RealEstate.Pages.BrewsModel
 @{
+    ViewData["Title"] = "Brewery";
     var TheBrewsList = (List<BrewsData.Breweries>)ViewData["Brews"];
 }
-
+<link rel="stylesheet" href="/css/BrewSheet.css" type="text/css" />
 <div>
-    <table border="1" width="80%">
+    <style>
+        .myTable {
+            width: 100%;
+            text-align: left;
+            background-color: antiquewhite;
+            border-collapse: collapse;
+        }
+
+            .myTable th {
+                background-color: darkblue;
+                color: white;
+            }
+
+            .myTable td,
+            .myTable th {
+                padding: 10px;
+                border: 1px solid black;
+            }
+    </style>
+    <table class="myTable" border="1" width="80%">
         <tr>
-          
+
             <th>Name</th>
             <th>Brewery Type</th>
             <th>Street</th>
             <th>Phone</th>
             <th>Website Url</th>
-         
+
         </tr>
         @{
             int First30brews = 0;
@@ -22,21 +42,21 @@
 
                 First30brews = First30brews + 1;
                 <tr>
-                    
+
                     <td>@brew.Name</td>
                     <td>@brew.BreweryType</td>
                     <td>@brew.Street</td>
                     <td>@brew.Phone</td>
                     <td>@brew.WebsiteUrl</td>
-                   
+
                 </tr>
 
 
-                    if (First30brews == 30)
-                    { break; }
-                }
+                if (First30brews == 30)
+                { break; }
             }
-     </table>
+        }
+    </table>
 
 </div>
 
