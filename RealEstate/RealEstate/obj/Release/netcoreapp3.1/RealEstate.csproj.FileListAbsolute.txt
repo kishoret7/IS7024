@@ -46,3 +46,4 @@ C:\Users\kisho\Documents\GitHub\IS7024\RealEstate\RealEstate\bin\Release\netcore
 C:\Users\kisho\Documents\GitHub\IS7024\RealEstate\RealEstate\obj\Release\netcoreapp3.1\Razor\Pages\Brews.cshtml.g.cs
 C:\Users\kisho\Documents\GitHub\IS7024\RealEstate\RealEstate\bin\Release\netcoreapp3.1\Vaccines.json
 C:\Users\kisho\Documents\GitHub\IS7024\RealEstate\RealEstate\obj\Release\netcoreapp3.1\Razor\Pages\Vaccines.cshtml.g.cs
+C:\Users\kisho\Documents\GitHub\IS7024\RealEstate\RealEstate\obj\Release\netcoreapp3.1\Razor\Pages\DreamHouses.cshtml.g.cs
