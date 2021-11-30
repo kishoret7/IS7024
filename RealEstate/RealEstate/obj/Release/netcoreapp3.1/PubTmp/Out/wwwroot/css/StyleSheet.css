@@ -13,5 +13,12 @@ body {
     color: #18fcff !important;
 }
 
+
+a:link {
+    color: beige;
+    background-color: transparent;
+    text-decoration: none;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
