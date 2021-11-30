@@ -1,0 +1,23 @@
+﻿body {
+    background-color: beige;
+    background-image: url("https://wallpaperaccess.com/full/4047148.png");
+    background-repeat: no-repeat;
+    background-size: 1800px 1200px;
+}
+.myTable {
+    width: 100%;
+    text-align: left;
+    background-color: lemonchiffon;
+    border-collapse: collapse;
+}
+
+.myTable th {
+    background-color: #d1ab5e;
+    color: white;
+}
+
+.myTable td,
+.myTable th {
+    padding: 10px;
+    border: 1px solid #d1ab5e;
+}
