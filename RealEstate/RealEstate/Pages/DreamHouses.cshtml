@@ -5,57 +5,57 @@
     var TheFavHouses = (IList<RealEstate.DreamHouses>)ViewData["DreamHouseList"];
 }
 
-
+<link rel="stylesheet" href="/css/UserForm.css" type="text/css" />
 <div margin="auto">
     <h6 class="display-4">I would love to stay at the place ...!!</h6></ hr>
     <form method="post">
         <dl class="row">
 
             <dt class="col-sm-6">
-                Near to the community              
+                Near to the community
             </dt>
             <dd class="col-sm-6">
                 <input type="text" class=" form-control mr-sm-2 col-sm-6" name="CommunityArea" placeholder="Grand Boulevard" size="40" />
             </dd>
 
-                <dt class="col-sm-6">                
-                    That would be good for         
-                </dt>
-                <dd class="col-sm-6">
+            <dt class="col-sm-6">
+                That would be good for
+            </dt>
+            <dd class="col-sm-6">
                 <input type="text" class=" form-control mr-sm-2 col-sm-6" name="PropertyType" placeholder="Artist Live/Work Space" size="40" />
-                </dd>
+            </dd>
 
-             <dt class="col-sm-6">
-                 Located at                 
-             </dt>
-             <dd class="col-sm-6">
-                 <input type="text" class=" form-control mr-sm-2 col-sm-6" name="Street" placeholder="West Fifth Ave" size="40" />
-              </dd>
+            <dt class="col-sm-6">
+                Located at
+            </dt>
+            <dd class="col-sm-6">
+                <input type="text" class=" form-control mr-sm-2 col-sm-6" name="Street" placeholder="West Fifth Ave" size="40" />
+            </dd>
 
-             <dt class="col-sm-6">
-                As big or small as          
-             </dt>
-             <dd class="col-sm-6">
-                 <input type="text" class=" form-control mr-sm-2 col-sm-6" name="PlotSize" placeholder="4000" size="40" />
+            <dt class="col-sm-6">
+                As big or small as
+            </dt>
+            <dd class="col-sm-6">
+                <input type="text" class=" form-control mr-sm-2 col-sm-6" name="PlotSize" placeholder="4000" size="40" />
 
-             </dd>
+            </dd>
 
-             <dt class="col-sm-6">
-                Built or Maintianed by      
-              </dt>
-             <dd class="col-sm-6">
-                 <input type="text" class=" form-control mr-sm-2 col-sm-6" name="ManagementCompany" placeholder="Millenia Apartments" size="100" />
-             </dd>
+            <dt class="col-sm-6">
+                Built or Maintianed by
+            </dt>
+            <dd class="col-sm-6">
+                <input type="text" class=" form-control mr-sm-2 col-sm-6" name="ManagementCompany" placeholder="Millenia Apartments" size="100" />
+            </dd>
 
-         </dl>
-            
-            <input id="Button1" type="submit" class="w3-btn w3-blue-grey" value="That's Right" />
-</form>
+        </dl>
+
+        <input id="Button1" type="submit" class="w3-btn w3-blue-grey" value="That's Right" />
+    </form>
 </div>
 
 <div>
     <hr />
-    <table border="1" width="90%" margin="auto" cellpadding="5">
+    <table class="mytable">
         <tr>
             <th>Community Area</th>
             <th>Property Type</th>
@@ -64,13 +64,16 @@
             <th>Management Company</th>
         </tr>
         @{ foreach (RealEstate.DreamHouses TheFavHouse in TheFavHouses)
-                        {
-            <tr>
-                <td>@TheFavHouse.CommunityArea</td>
-                <td> @TheFavHouse.PropertyType</td>
-                <td>@TheFavHouse.Street</td>
-                <td> @TheFavHouse.PlotSize</td>
-                <td> @TheFavHouse.ManagementCompany</td>
-            </tr> } }
+            {
+                <tr>
+                    <td>@TheFavHouse.CommunityArea</td>
+                    <td> @TheFavHouse.PropertyType</td>
+                    <td>@TheFavHouse.Street</td>
+                    <td> @TheFavHouse.PlotSize</td>
+                    <td> @TheFavHouse.ManagementCompany</td>
+                </tr>
+            }
+
+        }
     </table>
 </div>

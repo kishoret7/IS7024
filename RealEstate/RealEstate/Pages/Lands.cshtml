@@ -5,7 +5,7 @@
     var TheLandsList = (List<LandData.Lands>)ViewData["UserLandsList"];
 }
 
-<body style="background-color:powderblue;">
+<body>
     <link rel="stylesheet" href="/css/StyleSheet.css" type="text/css" />
     <div class="container">
 
@@ -32,29 +32,8 @@
         }
         else
         {
-            <div>
-                <style>
-                    .myTable {
-                        width: 100%;
-                        text-align: left;
-                        background-color: lemonchiffon;
-                        border-collapse: collapse;
-                    }
-
-                        .myTable th {
-                            background-color: goldenrod;
-                            color: white;
-                        }
-
-                        .myTable td,
-                        .myTable th {
-                            padding: 10px;
-                            border: 1px solid goldenrod;
-                        }
-                </style>
-
-
-                <table class="myTable" border="1" width="80%">
+            <div>                
+                <table class="myTable">
                     <tr>
                         <th>Property Status</th>
                         <th>Managing Org</th>
@@ -80,13 +59,11 @@
                                 <td>@land.Latitude</td>
                                 <td>@land.Longitude</td>
                             </tr>
-
                             if (FirstTenLands == 20)
                             { break; }
                         }
                     }
                 </table>
-
             </div>
         }
     </div>

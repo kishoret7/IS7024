@@ -1,23 +1,21 @@
 ﻿@page
 @model RealEstate.Pages.VaccinesModel
 @{
-
     ViewData["Title"] = "Vaccines";
     RealEstate.VaccinesData.Vaccines TheVacinesDetails= (RealEstate.VaccinesData.Vaccines)ViewData["CovidVaccines"];
-
 }
 <link rel="stylesheet" href="/css/CovidSheet.css" type="text/css" />
 <div class="container">
     <br />
-    <h4> <mark> We care about our cutomers. </mark> </h4>
-    <h6>  Latest StateWise Covid Vaccines  </h6>
+    <h4> <mark> We care about our cutomers. </mark> </h4> </hr>
+    <h6 style="color:beige"> Latest StateWise Covid Vaccines  </h6>
     <div>
         <form method="get" class="row mb-3 ml-1">
             <div class="input-group row">
-                <div class="col-sm-2 font-weight-bold">Select a State</div>
+                <div class="col-sm-2 font-weight-bold" style="color:beige">Select a State</div>
                 <select class="form-control" name="query" asp-for="@Model.UserState" asp-items="ViewBag.UserState"></select>
                 <div class="input-group-append">
-                    <input type="submit" value="Submit" class="btn btn-outline-secondary" />
+                    <input type="submit" value="Get Details" class="btn btn-primary" />
                 </div>
             </div>
         </form>
@@ -36,17 +34,15 @@
                 <div class="col-md-6">
                     <div class="card card-body shadow border-top" style="background-color: lightgrey">
                         <div>
-
                             <div class="card-subtitle">
                                 CUMULATIVE DOSAGE TILL DATE
                             </div>
-
                             <dl class="row">
                                 <dt class="col-sm-6">
                                     Date
                                 </dt>
                                 <dd class="col-sm-6">
-                                    @TheVacinesDetails.Date.Date.ToShortDateString()
+                                    @TheVacinesDetails.Date.Date.ToString("MMMM dd, yyyy")
                                 </dd>
                                 <dt class="col-sm-6">
                                     State
@@ -79,13 +75,10 @@
                                     @TheVacinesDetails.BoosterCumulative
                                 </dd>
                             </dl>
-
                         </div>
                     </div>
-                    </div>
-
-
                 </div>
+           </div>
         }
     </div>
 </div>
