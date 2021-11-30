@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: powderblue;
     background-image: url("https://wallpaperaccess.com/full/306427.jpg ");
     background-repeat: no-repeat;
     background-size: 1800px 1200px;
@@ -12,7 +13,6 @@ body {
 .linkchange {
     color: #18fcff !important;
 }
-
 
 a:link {
     color: blue;
@@ -29,18 +29,16 @@ a:link {
     border-collapse: collapse;
 }
 
-    .myTable th {
-        background-color: goldenrod;
-        color: white;
-    }
+.myTable th {
+    background-color: goldenrod;
+    color: white;
+}
 
-    .myTable td,
-    .myTable th {
-        padding: 10px;
-        border: 1px solid goldenrod;
-    }
-
-
+.myTable td,
+.myTable th {
+    padding: 10px;
+    border: 1px solid goldenrod;
+}
 
 .myBrewTable {
     width: 100%;
