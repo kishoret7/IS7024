@@ -15,10 +15,47 @@ body {
 
 
 a:link {
-    color: beige;
+    color: blue;
     background-color: transparent;
     text-decoration: none;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+.myTable {
+    width: 100%;
+    text-align: left;
+    background-color: lemonchiffon;
+    border-collapse: collapse;
+}
+
+    .myTable th {
+        background-color: goldenrod;
+        color: white;
+    }
+
+    .myTable td,
+    .myTable th {
+        padding: 10px;
+        border: 1px solid goldenrod;
+    }
+
+
+
+.myBrewTable {
+    width: 100%;
+    text-align: left;
+    background-color: antiquewhite;
+    border-collapse: collapse;
+}
+
+.myBrewTable th {
+    background-color: darkblue;
+    color: white;
+}
+
+.myBrewTable td,
+.myBrewTable th {
+    padding: 10px;
+    border: 1px solid black;
+}

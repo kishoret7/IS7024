@@ -17,7 +17,6 @@ namespace RealEstate.Pages
         [BindProperty]
         public DreamHouses House { get; set; }
 
-
         public DreamHousesModel(ILogger<DreamHousesModel> logger)
         {
             _logger = logger;

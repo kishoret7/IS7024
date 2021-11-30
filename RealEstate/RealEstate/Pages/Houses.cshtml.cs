@@ -7,19 +7,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-
 namespace RealEstate.Pages
-{
-    
+{    
     public class HousesModel : PageModel
     {
         [BindProperty]
         public SelectList AreaList { get; set; }
         public string SearchArea { get; set; }
         public List<string> AllAreaList { get; set; }
-
-        
-
+      
         public void Onget(string query)
         {
             InitAreaDropDown();
@@ -27,8 +23,6 @@ namespace RealEstate.Pages
             using (var webClient = new WebClient())
             {
                 string Houses_data = string.Empty;
-
-
                 try
                 {
                     Houses_data = webClient.DownloadString("https://data.cityofchicago.org/resource/s6ha-ppgi.json");
@@ -38,10 +32,7 @@ namespace RealEstate.Pages
                     Console.WriteLine("Error during API call - Housing", e);
 
                 }
-
                 var AllHousing = HouseData.Houses.FromJson(Houses_data);
-
-
 
                 if (!string.IsNullOrWhiteSpace(query))
                 {
@@ -62,25 +53,22 @@ namespace RealEstate.Pages
                 {
                     ViewData["UserHousesList"] = null;
                 }
-              
                 SearchArea = query;
-            }
-
-            
+            }          
         }
 
         private void InitAreaDropDown()
         {
             AllAreaList = new List<string>
             {
-                { "Englewood" },
+                {"Englewood" },
                 {"Edgewater"} ,
                 {"Roseland"} ,
                 {"Humboldt Park"} ,
                 {"Grand Boulevard"} ,
                 {"Woodlawn"} ,
                 {"Oakland"} ,
-                
+                {"West Englewood"} ,
                 {"Near North Side"} ,
                 {"West Town"} ,
                 {"Montclare"} ,
@@ -110,14 +98,12 @@ namespace RealEstate.Pages
                 {"Oakland"} ,
                 {"Humboldt Park"} ,
                 {"Lake View"} ,
-               
                 {"Lincoln Square"} ,
                 {"Douglas"} ,
                 {"Washington Park"} ,
                 {"Belmont Cragin"} ,
                 {"New City"} ,
                 {"North Lawndale"} ,
-             
                 {"West Ridge"} ,
                 {"Chicago Lawn"} ,
                 {"Belmont Cragin"} ,
@@ -128,7 +114,6 @@ namespace RealEstate.Pages
                 {"Lincoln Square"} ,
                 {"South Deering"} ,
                 {"Grand Boulevard"} ,
-               
                 {"Logan Square"} ,
                 {"West Town"} ,
                 {"Hyde Park"} ,
@@ -140,7 +125,6 @@ namespace RealEstate.Pages
                 {"Near West Side"} ,
                 {"Washington Park"} ,
                 {"North Lawndale"} ,
-               
                 {"Lower West Side"} ,
                 {"New City"} ,
                 {"West Town"} ,
@@ -148,10 +132,6 @@ namespace RealEstate.Pages
                 {"North Lawndale"} ,
                 {"Englewood"} ,
                 {"Near South Side"} ,
-
-
-
-
             };
 
             ViewData["SearchArea"] = new SelectList(AllAreaList);

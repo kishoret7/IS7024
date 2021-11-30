@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-
     using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
@@ -74,7 +73,6 @@
         [JsonConverter(typeof(ParseStringConverter))]
         public long? ComputedRegionBdys3D7I { get; set; }
     }
-
     public partial class Location
     {
         [JsonProperty("latitude")]
@@ -86,7 +84,6 @@
         [JsonProperty("human_address")]
         public string HumanAddress { get; set; }
     }
-
     public partial class Houses
     {
         public static List<Houses> FromJson(string json) => JsonConvert.DeserializeObject<List<Houses>>(json, HouseData.Converter.Settings);
@@ -96,7 +93,6 @@
     {
         public static string ToJson(this List<Houses> self) => JsonConvert.SerializeObject(self, HouseData.Converter.Settings);
     }
-
     internal static class Converter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
@@ -125,7 +121,6 @@
             }
             throw new Exception("Cannot unmarshal type long");
         }
-
         public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
         {
             if (untypedValue == null)
@@ -137,7 +132,6 @@
             serializer.Serialize(writer, value.ToString());
             return;
         }
-
         public static readonly ParseStringConverter Singleton = new ParseStringConverter();
     }
 }

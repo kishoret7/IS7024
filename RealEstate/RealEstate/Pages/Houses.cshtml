@@ -5,12 +5,10 @@
     var TheHousesList = (List<HouseData.Houses>)ViewData["UserHousesList"];
 }
 
-<body style="background-color:powderblue;">
+<body>
     <link rel="stylesheet" href="/css/StyleSheet.css" type="text/css" />
     <div class="container">
-
         <div>
-
             <form method="get" class="row mb-3 ml-1">
                 <div class="input-group row">
                     <div style="color: goldenrod" class="col-sm-2 font-weight-bold"> Community Area  </div>
@@ -20,42 +18,19 @@
                     </div>
                 </div>
             </form>
-
-
             @if (string.IsNullOrWhiteSpace(Model.SearchArea))
             {
                 <div class="alert alert-light"> Please choose a community area.</div>
             }
             else if (TheHousesList == null)
             {
-
                 <div class="alert alert-info"> Data for houses in this @Model.SearchArea community area  not found.</div>
             }
             else
             {
-                <div>
-                    <style>
-                        .myTable {
-                            width: 100%;
-                            text-align: left;
-                            background-color: lemonchiffon;
-                            border-collapse: collapse;
-                        }
-
-                            .myTable th {
-                                background-color: goldenrod;
-                                color: white;
-                            }
-
-                            .myTable td,
-                            .myTable th {
-                                padding: 10px;
-                                border: 1px solid goldenrod;
-                            }
-                    </style>
-                    <table class="myTable" border="1" width="80%">
+                <div>                    
+                    <table class="myTable" >
                         <tr>
-
                             <th>Property Name</th>
                             <th>Address</th>
                             <th>Community Area</th>
@@ -64,7 +39,6 @@
                             <th>Phone_Number</th>
                             <th>Management Company</th>
                         </tr>
-
                         @{
                             int FirstTenHouses = 0;
                             foreach (HouseData.Houses house in TheHousesList)
@@ -74,10 +48,7 @@
                                     <td>@house.PropertyName</td>
                                     <td>@house.Address</td>
                                     <td>@house.CommunityArea</td>
-
-                                    <td>
-                                        <a asp-page="./Lands" asp-route-query="@house.CommunityAreaNumber">@house.CommunityAreaNumber</a>
-                                    </td>
+                                    <td> <a asp-page="./Lands" asp-route-query="@house.CommunityAreaNumber">@house.CommunityAreaNumber</a> </td>
                                     <td>@house.Units</td>
                                     <td>@house.PhoneNumber </td>
                                     <td>@house.ManagementCompany</td>
@@ -85,8 +56,6 @@
 
                                 if (FirstTenHouses == 20)
                                 { break; }
-
-
                             }
                         }
                     </table>
@@ -94,5 +63,4 @@
             }
         </div>
     </div>
-
 </body>

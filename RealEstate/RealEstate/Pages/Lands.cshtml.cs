@@ -16,12 +16,9 @@ namespace RealEstate.Pages
 
         public async Task OnGetAsync(string query)
         {
-
             using (var webClient = new WebClient())
             {
                 string Lands_data = string.Empty;
-
-
                 try
                 {
                     Lands_data = webClient.DownloadString("https://data.cityofchicago.org/resource/aksk-kvfp.json");
@@ -30,10 +27,7 @@ namespace RealEstate.Pages
                 {
                     Console.WriteLine("Error during API call - Land Inventory", e);
                 }
-
                 var AllLandInventory = LandData.Lands.FromJson(Lands_data);
-
-
 
                 if (!string.IsNullOrWhiteSpace(query))
                 {
@@ -44,9 +38,7 @@ namespace RealEstate.Pages
                     CommunityLand = CommunityLand.OrderByDescending(x => x.SqFt).ToList();
                     if (CommunityLand != null && CommunityLand.Count > 0)
                     {
-
                         ViewData["UserLandsList"] = CommunityLand;
-
                     }
                     else
                     {
@@ -57,8 +49,7 @@ namespace RealEstate.Pages
                 {
                     ViewData["UserLandsList"] = null;
                 }
-
-                CommunityNumberItem = query;
+             CommunityNumberItem = query;
             }
         }
 

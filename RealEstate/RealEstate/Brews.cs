@@ -14,10 +14,10 @@
         [JsonProperty("name")]
         public string Name { get; set; }
 
-        [JsonProperty("brewery_type")]
+        [JsonProperty("brewerySelect")]
         public string BreweryType { get; set; }
 
-          [JsonProperty("street")]
+        [JsonProperty("street")]
         public string Street { get; set; }
 
         [JsonProperty("address_2")]
@@ -32,7 +32,7 @@
         [JsonProperty("state")]
         public string State { get; set; }
 
-       [JsonProperty("county_province")]
+        [JsonProperty("county_province")]
         public object CountyProvince { get; set; }
 
         [JsonProperty("postal_code")]
@@ -50,7 +50,7 @@
         [JsonProperty("phone")]
         public string Phone { get; set; }
 
-        [JsonProperty("website_url")]
+        [JsonProperty("websiteUrl")]
         public object WebsiteUrl { get; set; }
 
         [JsonProperty("updated_at")]
@@ -59,7 +59,6 @@
         [JsonProperty("created_at")]
         public DateTimeOffset CreatedAt { get; set; }
     }
-
 
     public partial class Breweries
     {

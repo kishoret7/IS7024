@@ -4,7 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
   <ItemGroup>
+    <Content Remove="wwwroot\css\BrewSheet.css" />
     <Content Remove="wwwroot\css\LogoSheet.css" />
     <Content Remove="wwwroot\css\StyleSheet1.css" />
   </ItemGroup>

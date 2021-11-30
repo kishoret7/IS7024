@@ -11,7 +11,6 @@ namespace RealEstate
         {
             AllHouses = new List<DreamHouses>();
         }
-
         public static IList<DreamHouses> AllHouses { get; set; }
     }
 }

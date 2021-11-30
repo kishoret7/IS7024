@@ -15,20 +15,17 @@ namespace RealEstate.Pages
         {
             using (var webClient = new WebClient())
             {
-                    string Brews_data = string.Empty;
-
+                string Brews_data = string.Empty;
                 try
                 {
-                    Brews_data = webClient.DownloadString("https://api.openbrewerydb.org/breweries");
+                    Brews_data = webClient.DownloadString("https://breweryarc.azurewebsites.net/breweryentire");
                 }
                 catch(Exception e)
                 {
                     Console.WriteLine("Error during API call - Breweries Data", e);
-                }
-                    
+                }                    
                 List<Breweries> BrewsCollection = Breweries.FromJson(Brews_data);
                 ViewData["Brews"] = BrewsCollection;
-
             }
 
         }
