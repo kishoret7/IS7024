@@ -25,7 +25,7 @@ namespace RealEstate.Pages
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Error during API call - Land Inventory", e);
+                    throw new Exception("Error during API call - Land Inventory", e);
                 }
                 var AllLandInventory = LandData.Lands.FromJson(Lands_data);
 
